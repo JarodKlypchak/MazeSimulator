@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class=main>
+        <h1>Maze Simulation</h1>
+        <canvas id="canvas"></canvas>
+
+        <div id=buttons>
+            <button id="generate">Generate Maze</button>
+            <button id="run" disabled=true>Run Maze</button>
+            <button id="display" disabled=true>Display Solution</button>
+            <button id="clear" disabled=true>Clear</button>
+            <button id="settings">Settings</button>
+        </div>
+
+        <div id="options">
+            <input type="text" />
+        </div>
+    </div>
+    <script src="cell.js"></script>
+    <script src="generateMaze.js"></script>
+    <script src="runMaze.js"></script>
+    <script src="displaySolution.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
