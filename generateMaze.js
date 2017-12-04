@@ -16,6 +16,7 @@ function generateMaze() {
 
 function takeStep() {
     current.color = "black";
+    current.display();
     let neighbor = current.getNeighbor(grid);
 
     if (neighbor != null) {
@@ -23,16 +24,21 @@ function takeStep() {
 
         removeWall(current, neighbor);
         current.color = "lightgray";
+        current.display();
         current = neighbor;
         current.color = "black";
+        current.display();
         stack.push(current);
     } else {
         if (stack.length > 0) {
             current.color = "lightgray";
+            current.display();
             current = stack.pop();
             current.color = "black";
+            current.display();
         } else {
             current.color = "lightgray";
+            current.display();
             run.disabled = false;
             generate.disabled = true;
             reset.disabled = false;
@@ -40,7 +46,7 @@ function takeStep() {
 
         }
     }
-    updateDisplay();
+
 
 }
 

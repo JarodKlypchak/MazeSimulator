@@ -13,9 +13,11 @@ function displaySolution() {
 function displayStep() {
 
     current.color = "red";
+    current.display();
     current.prev.color = "red";
+    current.prev.display();
     current = current.prev;
-    updateDisplay();
+
     if (current.prev == null) {
         display.disabled = true;
         clearInterval(c);
